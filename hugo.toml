@@ -1,0 +1,68 @@
+baseURL = "https://luckysynapse.dev/"
+languageCode = "en-us"
+title = "Lucky Synapse"
+theme = "PaperMod"
+
+# Clean URLs, no .html
+uglyURLs = false
+
+[params]
+  env = "production"
+  title = "Lucky Synapse"
+  description = "Clean architecture. Real AI. No hype."
+  keywords = ["backend", "architecture", "AI", "clean code"]
+  author = "Lucky"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowToc = true
+  TocOpen = false
+  comments = true
+
+[params.homeInfoParams]
+  Title = "Lucky Synapse"
+  Content = "Clean architecture. Real AI. No hype."
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/"
+
+# Navigation
+[menu]
+  [[menu.main]]
+    name = "Tech"
+    url = "/tech/"
+    weight = 1
+  [[menu.main]]
+    name = "Personal"
+    url = "/personal/"
+    weight = 2
+  [[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 3
+  [[menu.main]]
+    name = "Search"
+    url = "/search/"
+    weight = 4
+
+# Outputs for search and RSS
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# Archive
+[params.assets]
+  favicon = ""
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    style = "monokai"
+  [markup.goldmark.renderer]
+    unsafe = true
