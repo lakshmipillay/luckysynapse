@@ -1,4 +1,4 @@
-baseURL = "https://luckysynapse.dev/"
+baseURL = "https://luckysynapse.lpillay.workers.dev/"
 languageCode = "en-us"
 title = "Lucky Synapse"
 theme = "PaperMod"
