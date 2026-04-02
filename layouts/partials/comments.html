@@ -1,19 +1,14 @@
 {{- if .Params.comments | default .Site.Params.comments -}}
 <div id="giga-fora-comments"></div>
-<script>
-  (function() {
-    var s = document.createElement('script');
-    s.src = 'https://giga.mobile/embed.js';
-    s.async = true;
-    s.onload = function() {
-      Fora.mount('#giga-fora-comments', {
-        siteKey: '{{ .Site.Params.foraSiteKey | default "YOUR_SITE_KEY" }}',
-        pageId: '{{ .RelPermalink }}',
-        pageTitle: '{{ .Title }}',
-        theme: 'auto'
-      });
-    };
-    document.head.appendChild(s);
-  })();
-</script>
+<script
+  src="https://giga.mobile/embed.js"
+  data-site-key="{{ .Site.Params.foraSiteKey | default "YOUR_SITE_KEY" }}"
+  data-container-id="giga-fora-comments"
+  data-page-id="{{ .RelPermalink }}"
+  data-page-url="{{ .Permalink }}"
+  data-page-title="{{ .Title }}"
+  data-theme="auto"
+  data-features="sort,theme-toggle,comment-format,comment-vote,comment-reply,comment-permalink,comment-report,notify-browser"
+  defer
+></script>
 {{- end -}}

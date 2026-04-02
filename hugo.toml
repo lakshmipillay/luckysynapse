@@ -21,7 +21,8 @@ uglyURLs = false
   ShowWordCount = true
   ShowToc = true
   TocOpen = false
-  comments = true
+   comments = true
+  foraSiteKey = "site_91fdc0fc8375498781dd"
 
 [params.homeInfoParams]
   Title = "Lucky Synapse"
