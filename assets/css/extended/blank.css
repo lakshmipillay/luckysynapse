@@ -52,12 +52,12 @@
   --transition-slow: 300ms ease;
 }
 
-/* Dark mode overrides */
-:root .dark,
-.auto .dark {
-  --primary: #34d399;
-  --primary-hover: #10b981;
-  --primary-light: #064e3b;
+/* Dark mode overrides - matching PaperMod's selector */
+:root[data-theme="dark"] {
+  /* Softer green for dark mode to avoid harsh contrast */
+  --primary: #6ee7b7;
+  --primary-hover: #34d399;
+  --primary-light: rgba(110, 231, 183, 0.12);
   
   --text-primary: #f8fafc;
   --text-secondary: #cbd5e1;
@@ -447,6 +447,32 @@ button:hover,
   outline: 2px solid var(--primary);
   outline-offset: 2px;
   border-radius: var(--radius-sm);
+}
+
+/* === Dark Mode Specific Fixes === */
+:root[data-theme="dark"] {
+  /* Ensure content is visible - force text colors */
+  --content: #e2e8f0 !important;
+}
+
+:root[data-theme="dark"] .post-content,
+:root[data-theme="dark"] .post-content * {
+  color: var(--content) !important;
+}
+
+:root[data-theme="dark"] .post-content a {
+  color: var(--giga-primary, #6ee7b7) !important;
+}
+
+:root[data-theme="dark"] .entry-title a,
+:root[data-theme="dark"] .entry-title a * {
+  color: var(--content, #e2e8f0) !important;
+}
+
+:root[data-theme="dark"] .entry-content,
+:root[data-theme="dark"] .post-meta,
+:root[data-theme="dark"] .footer {
+  color: var(--secondary, #cbd5e1) !important;
 }
 
 /* === For Print Stylesheet === */
