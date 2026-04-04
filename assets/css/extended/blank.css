@@ -461,7 +461,7 @@ button:hover,
 }
 
 :root[data-theme="dark"] .post-content a {
-  color: var(--giga-primary, #6ee7b7) !important;
+  color: var(--primary, #6ee7b7) !important;
 }
 
 :root[data-theme="dark"] .entry-title a,
