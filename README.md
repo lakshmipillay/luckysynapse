@@ -6,8 +6,21 @@ Clean architecture. Real AI. No hype.
 
 - **Hugo** — static site generator
 - **PaperMod** — minimal theme
-- **Fora** — comments (giga.mobile)
-- **Cloudflare Pages** — hosting
+- **Giga.mobile (Fora)** — comments with edge-native performance
+- **Cloudflare Workers** — hosting (via wrangler)
+
+## Theme: Giga.mobile Harmony
+
+Custom CSS theme matching giga.mobile's clean, modern aesthetic:
+
+- **Design tokens**: Blue accent (#3b82f6), clean grays, smooth transitions
+- **Dark/light mode**: Seamless integration with Fora's theme toggle
+- **Typography**: System font stack for fast loading
+- **Components**: Rounded cards, subtle shadows, hover effects
+- **Spacing**: Consistent 8px grid
+- **Accessibility**: Focus styles, prefers-reduced-motion support
+
+Theme file: `assets/css/extended/blank.css`
 
 ## Local dev
 
@@ -17,13 +30,13 @@ hugo server -D
 
 ## Deploy
 
-Push to GitHub → Cloudflare Pages picks it up.
+Push to master → Cloudflare Workers auto-deploys (via wrangler).
 
-## Fora comments
+## Giga.mobile (Fora) comments
 
 1. Sign up at [giga.mobile](https://giga.mobile)
 2. Get your site key
-3. Add `foraSiteKey = "your-key"` to `hugo.toml` under `[params]`
+3. Already configured in `hugo.toml` — replace the placeholder key
 
 ## Structure
 

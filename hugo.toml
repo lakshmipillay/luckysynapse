@@ -59,6 +59,12 @@ uglyURLs = false
 [params.assets]
   favicon = ""
 
+# Giga.mobile / Fora Integration
+[params.fora]
+  enabled = true
+  theme = "auto"
+  features = "sort,theme-toggle,comment-format,comment-vote,comment-reply,comment-permalink,comment-report,notify-browser"
+
 [markup]
   [markup.highlight]
     codeFences = true
