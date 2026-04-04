@@ -6,10 +6,10 @@
 
 /* === Giga.mobile Design Tokens === */
 :root {
-  /* Primary accent - Fora's brand blue */
-  --primary: #3b82f6;
-  --primary-hover: #2563eb;
-  --primary-light: #dbeafe;
+  /* Primary accent - giga mobile's signature green */
+  --primary: #10b981;
+  --primary-hover: #059669;
+  --primary-light: #d1fae5;
   
   /* Text colors */
   --text-primary: #0f172a;
@@ -55,9 +55,9 @@
 /* Dark mode overrides */
 :root .dark,
 .auto .dark {
-  --primary: #60a5fa;
-  --primary-hover: #3b82f6;
-  --primary-light: #1e293b;
+  --primary: #34d399;
+  --primary-hover: #10b981;
+  --primary-light: #064e3b;
   
   --text-primary: #f8fafc;
   --text-secondary: #cbd5e1;
