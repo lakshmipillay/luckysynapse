@@ -1,70 +1,86 @@
-theme = "congo"
 baseURL = "https://luckysynapse.lpillay.workers.dev/"
-defaultContentLanguage = "en"
-enableRobotsTXT = true
-summaryLength = 30
-enableEmoji = true
-
-[taxonomies]
-  tag = "tags"
-  category = "categories"
-
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
-
-[imaging]
-  anchor = 'Center'
+languageCode = "en-us"
+title = "Lucky Synapse"
+theme = "PaperMod"
+uglyURLs = false
 
 [params]
-  colorScheme = "sapphire"
-  defaultAppearance = "dark"
-  autoSwitchAppearance = true
-  enableSearch = true
-  enableCodeCopy = true
-  mainSections = ["tech", "personal"]
-  favicon = ""
+  env = "production"
+  title = "Lucky Synapse"
+  description = "Clean architecture. Real AI. No hype."
+  keywords = ["backend", "architecture", "AI", "clean code"]
+  author = "Lucky"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowToc = true
+  TocOpen = false
   comments = true
   foraSiteKey = "site_91fdc0fc8375498781dd"
 
-[params.header]
-  layout = "fixed"
+  # Custom fonts
+  [params.assets]
+    favicon = ""
+    disableHLJS = false
 
-[params.footer]
-  showMenu = true
-  showCopyright = true
-  showThemeAttribution = false
-  showAppearanceSwitcher = true
-  showScrollToTop = true
+  # Homepage - profile mode with recent posts
+  [params.homeInfoParams]
+    Title = "Lucky Synapse"
+    Content = "Clean architecture. Real AI. No hype."
 
-[params.homepage]
-  layout = "profile"
-  showRecent = true
-  showRecentItems = 6
-  cardView = true
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/lakshmipillay"
 
-[params.article]
-  showDate = true
-  showAuthor = false
-  showHero = true
-  heroStyle = "thumbAndBackground"
-  showBreadcrumbs = true
-  showReadingTime = true
-  showTableOfContents = true
-  showRelatedContent = true
-  showWordCount = true
-  showHeadingAnchors = true
-  showPagination = true
+  # Profile mode for homepage
+  [params.profileMode]
+    enabled = true
+    title = "Lucky Synapse"
+    subtitle = "Clean architecture. Real AI. No hype."
+    imageUrl = ""
+    imageTitle = ""
+    [[params.profileMode.buttons]]
+      name = "Tech"
+      url = "/tech/"
 
-[params.list]
-  showHero = true
-  heroStyle = "background"
-  showSummary = true
-  showCards = true
+    [[params.profileMode.buttons]]
+      name = "Personal"
+      url = "/personal/"
 
-[params.term]
-  showHero = true
-  showCards = true
+  # Fora comments
+  [params.fora]
+    enabled = true
+    theme = "auto"
+    features = "sort,theme-toggle,comment-format,comment-vote,comment-reply,comment-permalink,comment-report,notify-browser"
 
+# Navigation
+[menu]
+  [[menu.main]]
+    name = "Tech"
+    url = "/tech/"
+    weight = 1
+  [[menu.main]]
+    name = "Personal"
+    url = "/personal/"
+    weight = 2
+  [[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 3
+  [[menu.main]]
+    name = "Search"
+    url = "/search/"
+    weight = 4
+
+# Outputs
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# Code highlighting
 [markup]
   [markup.highlight]
     codeFences = true
@@ -73,34 +89,3 @@ enableEmoji = true
     style = "monokai"
   [markup.goldmark.renderer]
     unsafe = true
-
-[languages.en]
-  title = "Lucky Synapse"
-  languageName = "English"
-  weight = 1
-
-  [languages.en.params]
-    description = "Clean architecture. Real AI. No hype."
-
-  [languages.en.params.author]
-    name = "Lucky"
-    headline = "Clean architecture. Real AI. No hype."
-    bio = "Backend architect. Building things that actually work."
-    links = [
-      { github = "https://github.com/" },
-    ]
-
-[[languages.en.menu.main]]
-  name = "Tech"
-  pageRef = "tech"
-  weight = 1
-
-[[languages.en.menu.main]]
-  name = "Personal"
-  pageRef = "personal"
-  weight = 2
-
-[[languages.en.menu.main]]
-  name = "Tags"
-  pageRef = "tags"
-  weight = 3
