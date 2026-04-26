@@ -1,69 +1,46 @@
+theme = "stack"
 baseURL = "https://luckysynapse.lpillay.workers.dev/"
 languageCode = "en-us"
 title = "Lucky Synapse"
-theme = "PaperMod"
-
-# Clean URLs, no .html
-uglyURLs = false
 
 [params]
-  env = "production"
-  title = "Lucky Synapse"
-  description = "Clean architecture. Real AI. No hype."
-  keywords = ["backend", "architecture", "AI", "clean code"]
-  author = "Lucky"
-  defaultTheme = "auto"
-  ShowReadingTime = true
-  ShowShareButtons = true
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
-  ShowWordCount = true
-  ShowToc = true
-  TocOpen = false
-   comments = true
-  foraSiteKey = "site_91fdc0fc8375498781dd"
+  mainSections = ["tech", "personal"]
+  rssFullContent = true
 
-[params.homeInfoParams]
-  Title = "Lucky Synapse"
-  Content = "Clean architecture. Real AI. No hype."
+  [params.footer]
+    since = 2026
 
-[[params.socialIcons]]
-  name = "github"
-  url = "https://github.com/"
+  [params.dateFormat]
+    published = ":date_full"
+    lastUpdated = ":date_full"
 
-# Navigation
-[menu]
-  [[menu.main]]
-    name = "Tech"
-    url = "/tech/"
-    weight = 1
-  [[menu.main]]
-    name = "Personal"
-    url = "/personal/"
-    weight = 2
-  [[menu.main]]
-    name = "Tags"
-    url = "/tags/"
-    weight = 3
-  [[menu.main]]
-    name = "Search"
-    url = "/search/"
-    weight = 4
+  [params.sidebar]
+    compact = false
 
-# Outputs for search and RSS
+  [params.article]
+    toc = true
+    readingTime = true
+    headingAnchor = true
+
+    [params.article.list]
+      showTags = true
+
+    [params.article.license]
+      enabled = false
+
+  [params.colorScheme]
+    toggle = true
+    default = "auto"
+
+  [params.comments]
+    enabled = false
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
 [outputs]
   home = ["HTML", "RSS", "JSON"]
-
-# Archive
-[params.assets]
-  favicon = ""
-
-# Giga.mobile / Fora Integration
-[params.fora]
-  enabled = true
-  theme = "auto"
-  features = "sort,theme-toggle,comment-format,comment-vote,comment-reply,comment-permalink,comment-report,notify-browser"
 
 [markup]
   [markup.highlight]
@@ -73,3 +50,18 @@ uglyURLs = false
     style = "monokai"
   [markup.goldmark.renderer]
     unsafe = true
+
+[[menu.main]]
+  name = "Tech"
+  pageRef = "/tech"
+  weight = 1
+
+[[menu.main]]
+  name = "Personal"
+  pageRef = "/personal"
+  weight = 2
+
+[[menu.main]]
+  name = "Tags"
+  pageRef = "/tags"
+  weight = 3
