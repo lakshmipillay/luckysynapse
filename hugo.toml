@@ -16,13 +16,15 @@ enableEmoji = true
   anchor = 'Center'
 
 [params]
-  colorScheme = "congo"
+  colorScheme = "ocean"
   defaultAppearance = "dark"
   autoSwitchAppearance = true
   enableSearch = true
   enableCodeCopy = true
   mainSections = ["tech", "personal"]
   favicon = ""
+  comments = true
+  foraSiteKey = "site_91fdc0fc8375498781dd"
 
 [params.header]
   layout = "fixed"
