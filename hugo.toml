@@ -16,7 +16,7 @@ enableEmoji = true
   anchor = 'Center'
 
 [params]
-  colorScheme = "fire"
+  colorScheme = "sapphire"
   defaultAppearance = "dark"
   autoSwitchAppearance = true
   enableSearch = true
